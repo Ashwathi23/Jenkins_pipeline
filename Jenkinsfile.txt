@@ -1,12 +1,6 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Delay') {
-            steps {
-                echo 'Waiting for 1 minute before starting the pipeline...'
-                sleep time: 1, unit: 'MINUTES'
-            }
         stage('Build') {
             steps {
                 echo '=== Building the code using Maven ==='
